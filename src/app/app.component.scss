@@ -1,0 +1,58 @@
+@import "../assets/styles/colors.scss";
+
+@mixin light-background {
+    background-color: rgba($color-white, 0.1) !important;
+}
+
+.nav-bar {
+    background-color: $color-primary;
+    width: 300px;
+    padding: 0px;
+
+    button {
+        height: 50px;
+        width: 100%;
+        color: $color-white;
+        background-color: transparent;
+        border: none;
+        transition: 0.2s;
+        font-weight: lighter;
+        font-size: 1.2rem;
+        text-align: left;
+        padding-left: 20px;
+
+        &:hover {
+            @include light-background();
+        }
+    }
+}
+
+.active-link {
+    @include light-background();
+    border-left: 4px $color-white solid !important;
+    padding-left: 20px;
+}
+
+.main-container {
+    padding: 10px;
+}
+
+.nav-container {
+    height: 100%;
+
+    .top-nav {
+        height: 75px;
+        background-color: $color-light-grey;
+
+        .menu-toggle {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background-color: transparent;
+            .mat-icon {
+                font-size: 2rem;
+            }
+        }
+    }
+}

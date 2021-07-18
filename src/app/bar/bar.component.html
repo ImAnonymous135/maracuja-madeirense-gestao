@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col">
+        <h1>Bar</h1>
+        <app-year-selection (onValueChanged)="setYearValue($event)"></app-year-selection>
+    </div>
+</div>
+
+<div class="row">
+    <div *ngFor="let month of months; let index = index" class="col-xl-3 col-md-4 col-sm-6 pb-3">
+        <mat-card [routerLink]="year.toString()+'/'+month">
+            <mat-card-title>{{month}}</mat-card-title>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <div class="row">
+
+                </div>
+                <div class="row">
+                    <p class="stat-label"><b>Rendimento:</b><span>{{monthStats[index].incomeTotal| currency: 'EUR'}}</span></p>
+                    <p class="stat-label"><b>Despesas:</b><span>{{monthStats[index].expenseTotal| currency: 'EUR'}}</span></p>
+                    <p class="stat-label"><b>Total:</b><span [ngStyle]="{'color': getValueColor(monthStats[index].total)}">{{monthStats[index].total | currency: 'EUR'}}</span></p>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
