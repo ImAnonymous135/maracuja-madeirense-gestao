@@ -16,6 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { YearSelectionComponent } from './shared/year-selection/year-selection.component';
 import { MonthOverviewComponent } from './bar/month-overview/month-overview.component';
+import { CalendarComponent } from './bar/month-overview/calendar/calendar.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { MonthOverviewComponent } from './bar/month-overview/month-overview.comp
     BarComponent,
     StatsComponent,
     YearSelectionComponent,
-    MonthOverviewComponent
+    MonthOverviewComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
