@@ -1,1 +1,8 @@
-<p>calendar works!</p>
+<mat-card>
+    <mat-card-content>
+        <div class="grid-container">
+            <div class="week-day" *ngFor="let day of weekDays">{{day}}</div>
+            <div *ngFor="let day of days"><div *ngIf="day != ''" class="day">{{day}}</div></div>
+        </div>
+    </mat-card-content>
+</mat-card>

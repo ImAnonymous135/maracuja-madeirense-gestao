@@ -2,5 +2,9 @@
     <div class="col">
         <h1 *ngIf="month">{{month.name}}</h1>
     </div>
-    
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <app-calendar [month]="month.index" [year]="year"></app-calendar>
+    </div>
 </div>
